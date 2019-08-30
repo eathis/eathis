@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath server eathis.wsgi --log-file -
+eathis: gunicorn --pythonpath server eathis.wsgi --log-file -
