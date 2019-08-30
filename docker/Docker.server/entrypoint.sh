@@ -15,9 +15,9 @@ function mockdata {
     :
 }
 
-# function assets {
-#     python manage.py collectstatic --noinput
-# }
+function assets {
+    :
+}
 
 function prepare {
     :
