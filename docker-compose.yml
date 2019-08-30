@@ -1,0 +1,20 @@
+version : '3'
+services :
+  db:
+    image: postgres
+    container_name: eathis_db
+  eathis:
+    build:
+      context: .
+      dockerfile: ./docker/Docker.server/Dockerfile
+    image: eathis
+    env_file: .env
+    container_name: eathis
+    volumes:
+      - .:/eathis
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    links:
+      - db:postgres
